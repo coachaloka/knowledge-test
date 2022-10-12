@@ -3,6 +3,7 @@ import Options from "../Options/Options";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import "./Questions.css";
+import {Alert} from 'flowbite-react'
 
 const Questions = ({ quiz }) => {
   const { question, options, correctAnswer} = quiz;
@@ -25,7 +26,7 @@ const [isActive, setIsActive] = useState(true);
             options.map(option=><Options key={option.id} option={option} correctAnswer={correctAnswer}/>)
         }
       </div>
-        {/* <div className={isActive ? 'hidden' : ''}>
+         <div className={isActive ? 'hidden' : ''}>
         
                 <Alert
                     color="success"
@@ -37,7 +38,7 @@ const [isActive, setIsActive] = useState(true);
                         {' '}{correctAnswer}
                     </span>
                 </Alert>
-        </div> */}
+        </div> 
     </div>
   );
 };

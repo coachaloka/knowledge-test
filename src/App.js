@@ -4,8 +4,8 @@ import Main from './Main/Main';
 import Home from './Home/Home';
 import Blog from './Blog/Blog';
 import Statistics from './Statistics/Statistics';
-import Quizes from './CQuizes/Quizes';
-import Error from './Components/Error/Error';
+import Quizes from './Quizes/Quizes';
+import Error from './Error/Error';
 
 function App() {
   const router =createBrowserRouter([

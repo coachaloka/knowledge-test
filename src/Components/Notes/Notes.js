@@ -11,7 +11,7 @@ const Notes = ({ note }) => {
   return (
     <div className="notes">
       <img src={logo} alt="imge" />
-      <div className="notes">
+      <div className="note">
         <h3>{name}</h3>
         <h3>Total: {total}</h3>
         <Link to={`/quizes/${id}`}>
