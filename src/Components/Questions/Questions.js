@@ -3,8 +3,6 @@ import Options from "../Options/Options";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import "./Questions.css";
-// import { Alert} from 'flowbite-react';
-// import { ToastContainer } from "react-toastify";
 
 const Questions = ({ quiz }) => {
   const { question, options, correctAnswer} = quiz;
@@ -15,7 +13,7 @@ const [isActive, setIsActive] = useState(true);
   };
 
   return (
-    <div className="q">
+    <div className="ques">
       {/* <ToastContainer /> */}
       <div className="qa">
         <h3>Quizes: {question.slice(3, -4)}</h3>

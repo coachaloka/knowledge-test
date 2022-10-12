@@ -7,3 +7,30 @@
 .home img{
     width: 300px;
 }
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.container h2{
+    font-size: 25px;
+    font-weight: bold;
+}
+.container img{
+    width: 500px;
+    height: 250px;
+}
+@media only screen and (max-width: 576px) {
+    .home{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        background-color: rgb(240, 217, 176);
+    }
+    .container img{
+        width: 300px;
+        height: 200px;
+    }
+}
