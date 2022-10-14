@@ -1,0 +1,16 @@
+.option{
+    display: flex;
+    align-items: center;
+    border: 1px solid gold;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 20px;
+    padding: 10px;
+}
+.option:hover{
+    background-color: aqua;
+    color: black;
+}
+.option p{
+    margin-left: 10px;
+}

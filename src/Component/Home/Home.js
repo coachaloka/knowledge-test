@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div>
             <div>
-                <h2>Test your Skills</h2>
+                <h2>Test your Kowledge</h2>
                 <div className='home'>
                     {
                         allBooks.data.map(book=><Book key={book.id} book={book}/>)

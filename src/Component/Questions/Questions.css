@@ -1,0 +1,10 @@
+.q{
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 10px;
+}
+.qa{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
