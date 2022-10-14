@@ -1,49 +1,38 @@
-import './App.css';
+import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Main from './Main/Main';
-import Home from './Home/Home';
-import Blog from './Blog/Blog';
-import Statistics from './Statistics/Statistics';
-import Quizes from './Quizes/Quizes';
-import Error from './Error/Error';
 
-function App() {
-  const router =createBrowserRouter([
-{
-  path:'/',
-  element: <Main/>,
-  children: [
+import './App.css';
+import Blog from './Component/Blog/Blog';
+import Statistics from './Statistics/Statistics';
+import Main from './Component/Main/Main';
+import Home from './Component/Home/Home';
+
+
+const App = () => {
+  const router = createBrowserRouter([
     {
       path: '/',
-      loader: ()=> fetch('https://openapi.programming-hero.com/api/quiz'),
-     element: <Home/>
-    },
-    {
-      path: 'Blog',
-      element: <Blog/>
-    },
-    {
-      path: 'statistics',
-      loader: ()=> fetch('https://openapi.programming-hero.com/api/quiz'),
-     element: <Statistics/>
-    },
-    {
-      path: '/quizes/:id',
-      loader: ({params})=>{
-        return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`);
+      element: <Main />,
+      children: [
+        {
+          path: '/',
+          loader: ()=>fetch ('https://openapi.programming-hero.com/api/quiz'),
+          element: <Home />
         },
-      element: <Quizes />
-    },
-    {
-      path: '*',
-      element: <Error />
+        {
+          path: 'blog',
+          element: <Blog />
+        },
+        {
+          path: 'statistics',
+          element: <Statistics />
+        },
+      ]
     }
-  ]
-}
   ])
   return (
-    <div className="App">
-      <RouterProvider router={router}/>
+    <div className='App'>
+      <RouterProvider router={router} />
     </div>
   );
 }
