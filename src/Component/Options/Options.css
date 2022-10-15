@@ -8,7 +8,7 @@
     padding: 10px;
 }
 .option:hover{
-    background-color: aqua;
+    background-color: rgb(255, 0, 106);
     color: black;
 }
 .option p{

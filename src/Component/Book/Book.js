@@ -20,6 +20,13 @@ const Book = ({ book }) => {
             </button>
         </Link>
       </div>
+
+
+
+
+
+
+      
     </div>
   );
 };

@@ -3,11 +3,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './App.css';
 import Blog from './Component/Blog/Blog';
-import Statistics from './Statistics/Statistics';
 import Main from './Component/Main/Main';
 import Home from './Component/Home/Home';
 import Quizes from './Component/Quizes/Quizes';
-import Error from './Error/Error';
+import Error from './Component/Error/Error';
+import Statistics from './Component/Statistics/Statistics';
+
 
 const App = () => {
   const router = createBrowserRouter([
@@ -27,6 +28,7 @@ const App = () => {
         
         {
           path: 'statistics',
+          loader: ()=>fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Statistics />
         },
         {
